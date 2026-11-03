@@ -1,0 +1,76 @@
+{
+	"Name": "Computer Monitor",
+	"Version": "0.1.0.0",
+	"Author": "LazyAdmin22",
+	"Actions": [
+		{
+			"Name": "CPU Usage",
+			"UUID": "com.lazyadmin22.computer-monitor.cpu-usage",
+			"Icon": "imgs/actions/cpu-usage/icon",
+			"Tooltip": "Live CPU usage; turns red above the warning threshold.",
+			"Controllers": ["Keypad"],
+			"UserTitleEnabled": false,
+			"States": [{ "Image": "imgs/actions/cpu-usage/key" }]
+		},
+		{
+			"Name": "Memory Usage",
+			"UUID": "com.lazyadmin22.computer-monitor.memory-usage",
+			"Icon": "imgs/actions/memory-usage/icon",
+			"Tooltip": "Live RAM usage; turns red above the warning threshold.",
+			"Controllers": ["Keypad"],
+			"UserTitleEnabled": false,
+			"States": [{ "Image": "imgs/actions/memory-usage/key" }]
+		},
+		{
+			"Name": "Disk Usage",
+			"UUID": "com.lazyadmin22.computer-monitor.disk-usage",
+			"Icon": "imgs/actions/disk-usage/icon",
+			"Tooltip": "Live system-drive usage; turns red above the warning threshold.",
+			"Controllers": ["Keypad"],
+			"UserTitleEnabled": false,
+			"States": [{ "Image": "imgs/actions/disk-usage/key" }]
+		},
+		{
+			"Name": "CPU Temperature",
+			"UUID": "com.lazyadmin22.computer-monitor.cpu-temp",
+			"Icon": "imgs/actions/cpu-temp/icon",
+			"Tooltip": "Live CPU temperature; turns red above the warning threshold. Shows N/A if unavailable.",
+			"Controllers": ["Keypad"],
+			"UserTitleEnabled": false,
+			"States": [{ "Image": "imgs/actions/cpu-temp/key" }]
+		},
+		{
+			"Name": "GPU Temperature",
+			"UUID": "com.lazyadmin22.computer-monitor.gpu-temp",
+			"Icon": "imgs/actions/gpu-temp/icon",
+			"Tooltip": "Live GPU temperature; turns red above the warning threshold. GPU sensor support varies by system and shows N/A when unavailable.",
+			"Controllers": ["Keypad"],
+			"UserTitleEnabled": false,
+			"States": [{ "Image": "imgs/actions/gpu-temp/key" }]
+		},
+		{
+			"Name": "Network Usage",
+			"UUID": "com.lazyadmin22.computer-monitor.network-usage",
+			"Icon": "imgs/actions/network-usage/icon",
+			"Tooltip": "Shows live network receive/transmit speed.",
+			"Controllers": ["Keypad"],
+			"UserTitleEnabled": false,
+			"PropertyInspectorPath": "pi/network-inspector.html",
+			"States": [{ "Image": "imgs/actions/network-usage/key" }]
+		}
+	],
+	"Category": "Computer Monitor",
+	"CategoryIcon": "imgs/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "Monitor CPU, memory, disk, CPU temperature, GPU temperature, and network usage from your Stream Deck, with per-key configurable warning thresholds that turn the key red.",
+	"Icon": "imgs/plugin-icon",
+	"PropertyInspectorPath": "pi/inspector.html",
+	"SDKVersion": 3,
+	"Software": { "MinimumVersion": "7.1" },
+	"OS": [
+		{ "Platform": "windows", "MinimumVersion": "10" },
+		{ "Platform": "mac", "MinimumVersion": "12" }
+	],
+	"Nodejs": { "Version": "24", "Debug": "enabled" },
+	"UUID": "com.lazyadmin22.computer-monitor"
+}

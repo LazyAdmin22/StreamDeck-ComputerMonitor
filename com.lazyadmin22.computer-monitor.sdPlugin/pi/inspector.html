@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="https://sdpi-components.dev/releases/v3/sdpi-components.js"></script>
+	</head>
+	<body>
+		<sdpi-item id="threshold-item" label="Warning Threshold">
+			<sdpi-range id="threshold-range" setting="threshold" min="0" max="100" step="1" showlabels></sdpi-range>
+		</sdpi-item>
+		<sdpi-item label="">
+			<span style="opacity:.7;font-size:11px;">
+				Percentage (0-100) for Usage actions, degrees Celsius for Temperature actions.
+				The key turns red once the live value reaches this threshold.
+			</span>
+		</sdpi-item>
+		<script>
+			// sdpi-range has no built-in live-value readout, so reflect the current value into the
+			// item's label ourselves. Polling (rather than relying solely on "input") also catches the
+			// value once it's loaded asynchronously from the persisted setting on open.
+			(function () {
+				const item = document.getElementById("threshold-item");
+				const range = document.getElementById("threshold-range");
+				let last;
+				const sync = () => {
+					const value = range.value;
+					if (value !== undefined && value !== null && value !== "" && value !== last) {
+						last = value;
+						item.setAttribute("label", `Warning Threshold: ${value}`);
+					}
+				};
+				range.addEventListener("input", sync);
+				setInterval(sync, 150);
+			})();
+		</script>
+	</body>
+</html>
