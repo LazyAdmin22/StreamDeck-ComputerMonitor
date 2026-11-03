@@ -8,55 +8,91 @@
 			"UUID": "com.lazyadmin22.computer-monitor.cpu-usage",
 			"Icon": "imgs/actions/cpu-usage/icon",
 			"Tooltip": "Live CPU usage; turns red above the warning threshold.",
-			"Controllers": ["Keypad"],
+			"Controllers": [
+				"Keypad"
+			],
 			"UserTitleEnabled": false,
-			"States": [{ "Image": "imgs/actions/cpu-usage/key" }]
+			"States": [
+				{
+					"Image": "imgs/actions/cpu-usage/key"
+				}
+			]
 		},
 		{
 			"Name": "Memory Usage",
 			"UUID": "com.lazyadmin22.computer-monitor.memory-usage",
 			"Icon": "imgs/actions/memory-usage/icon",
 			"Tooltip": "Live RAM usage; turns red above the warning threshold.",
-			"Controllers": ["Keypad"],
+			"Controllers": [
+				"Keypad"
+			],
 			"UserTitleEnabled": false,
-			"States": [{ "Image": "imgs/actions/memory-usage/key" }]
+			"States": [
+				{
+					"Image": "imgs/actions/memory-usage/key"
+				}
+			]
 		},
 		{
 			"Name": "Disk Usage",
 			"UUID": "com.lazyadmin22.computer-monitor.disk-usage",
 			"Icon": "imgs/actions/disk-usage/icon",
 			"Tooltip": "Live system-drive usage; turns red above the warning threshold.",
-			"Controllers": ["Keypad"],
+			"Controllers": [
+				"Keypad"
+			],
 			"UserTitleEnabled": false,
-			"States": [{ "Image": "imgs/actions/disk-usage/key" }]
+			"States": [
+				{
+					"Image": "imgs/actions/disk-usage/key"
+				}
+			]
 		},
 		{
 			"Name": "CPU Temperature",
 			"UUID": "com.lazyadmin22.computer-monitor.cpu-temp",
 			"Icon": "imgs/actions/cpu-temp/icon",
 			"Tooltip": "Live CPU temperature; turns red above the warning threshold. Shows N/A if unavailable.",
-			"Controllers": ["Keypad"],
+			"Controllers": [
+				"Keypad"
+			],
 			"UserTitleEnabled": false,
-			"States": [{ "Image": "imgs/actions/cpu-temp/key" }]
+			"States": [
+				{
+					"Image": "imgs/actions/cpu-temp/key"
+				}
+			]
 		},
 		{
 			"Name": "GPU Temperature",
 			"UUID": "com.lazyadmin22.computer-monitor.gpu-temp",
 			"Icon": "imgs/actions/gpu-temp/icon",
 			"Tooltip": "Live GPU temperature; turns red above the warning threshold. GPU sensor support varies by system and shows N/A when unavailable.",
-			"Controllers": ["Keypad"],
+			"Controllers": [
+				"Keypad"
+			],
 			"UserTitleEnabled": false,
-			"States": [{ "Image": "imgs/actions/gpu-temp/key" }]
+			"States": [
+				{
+					"Image": "imgs/actions/gpu-temp/key"
+				}
+			]
 		},
 		{
 			"Name": "Network Usage",
 			"UUID": "com.lazyadmin22.computer-monitor.network-usage",
 			"Icon": "imgs/actions/network-usage/icon",
 			"Tooltip": "Shows live network receive/transmit speed.",
-			"Controllers": ["Keypad"],
+			"Controllers": [
+				"Keypad"
+			],
 			"UserTitleEnabled": false,
 			"PropertyInspectorPath": "pi/network-inspector.html",
-			"States": [{ "Image": "imgs/actions/network-usage/key" }]
+			"States": [
+				{
+					"Image": "imgs/actions/network-usage/key"
+				}
+			]
 		}
 	],
 	"Category": "Computer Monitor",
@@ -66,11 +102,22 @@
 	"Icon": "imgs/plugin-icon",
 	"PropertyInspectorPath": "pi/inspector.html",
 	"SDKVersion": 3,
-	"Software": { "MinimumVersion": "7.1" },
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
 	"OS": [
-		{ "Platform": "windows", "MinimumVersion": "10" },
-		{ "Platform": "mac", "MinimumVersion": "12" }
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		},
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		}
 	],
-	"Nodejs": { "Version": "24", "Debug": "enabled" },
+	"Nodejs": {
+		"Version": "24",
+		"Debug": "enabled"
+	},
 	"UUID": "com.lazyadmin22.computer-monitor"
 }
